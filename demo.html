@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .button {
+    padding: 10px 25px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    background-color: green;
+    color: white;
+    background-repeat: 4px;
+    }
+    .button--mod {
+      background-color: red;
+    }
+
+    .button--mod span {
+      font-style: italic;
+    }
+</style>
+<body>
+
+  <!-- БЛОК__ЭЛЕМЕНТ--МОДИФИКАТОР
+
+  BLOCK {
+    ELEMENT
+    ELEMENT
+    ELEMENT BLOCK
+
+  }
+
+  BLOCK--MOD {
+    ELEMENT
+    ELEMENT
+    ELEMENT BLOCK
+
+  } -->
+<a href="#" class="button">Название кнопки</a>
+
+<a href="#" class="button">
+  <span class="button__icon custom-icon">&#9829;</span>
+  <span class="button__text">Название кнопки</span>
+</a>
+
+<a href="#" class="button button--mod"><span>Название кнопки</span></a>
+
+
+
+
+</body>
+</html>
