@@ -1,18 +1,389 @@
+:root {
+  --font-family: "Inter", sans-serif;
+
+  --white: #fff;
+  --red: #f31717;
+  --darkblue: #131730;
+  --darkblue-mod: rgba(19, 23, 48, 0.8);
+
+  --bg: #f2f6f9;
+  --bluviolet: #5b48fc;
+  --green: #9de311;
+
+}
+
+/* Шрифты  */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.eot');
+  src: local('../fonts/Inter Regular'), local('../fonts/Inter-Regular'),
+    url('../fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Inter-Regular.woff2') format('woff2'),
+    url('../fonts/Inter-Regular.woff') format('woff'),
+    url('../fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Bold.eot');
+  src: local('../fonts/Inter Bold'), local('../fonts/Inter-Bold'),
+    url('../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Inter-Bold.woff2') format('woff2'),
+    url('../fonts/Inter-Bold.woff') format('woff'),
+    url('../fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Medium.eot');
+  src: local('../fonts/Inter Medium'), local('../fonts/Inter-Medium'),
+    url('../fonts/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Inter-Medium.woff2') format('woff2'),
+    url('../fonts/Inter-Medium.woff') format('woff'),
+    url('../fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-LightBETA.eot');
+  src: local('../fonts/Inter Light BETA'), local('../fonts/Inter-LightBETA'),
+    url('../fonts/Inter-LightBETA.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Inter-LightBETA.woff2') format('woff2'),
+    url('../fonts/Inter-LightBETA.woff') format('woff'),
+    url('../fonts/Inter-LightBETA.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Шрифты конец  */
+
+/* Базовые стили  */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 375px;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  font-style: normal;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--darkblue-mod);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input,
+textarea,
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Базовые стили конец  */
+
+/* Служебные классы  */
 .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.visually-hidden2  {
+.visually-hidden:not(:focus),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
+  padding: 0;
   margin: -1px;
   border: 0;
-  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   white-space: nowrap;
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
+
+/* Служебные классы конец */
+
+/* --------------------- БЛОКИ ------------------------- */
+
+/* Кнопка  */
+.button {
+  padding: 21px 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--white);
+  background-color: var(--bluviolet);
+  border-radius: 32px;
+  display: block;
+  max-width: max-content;
+  transition: background-color 0.3s;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.button:after {
+  content: '';
+  display: block;
+  background-image: url(../svg/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 8px;
+  height: 12px;
+}
+
+.button:hover {
+  background-color: #2f22a5;
+}
+
+.button--social {
+  display: grid;
+  gap: 12px;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  color: var(--white);
+}
+
+.button--social:after {
+  display: none;
+}
+
+.button--telegram {
+  background-color: #1E96C8
+}
+
+.button__icon {}
+
+.button--whatsap {
+  background-color: #43AD45;
+}
+
+/* Кнопка конец */
+
+
+/* заголовки */
+.title {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  color: var(--darkblue);
+}
+
+.title span {
+  color: var(--green);
+}
+
+.visually-hidden {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  color: var(--white);
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* заголовки конец */
+
+
+
+/* --------------------- СЕКЦИИ ------------------------- */
+/* шапка  */
+.header {}
+
+.header__logo {
+  display: block;
+  width: 48px;
+  color: #fff;
+}
+
+.header__tel {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--white);
+}
+
+.header__button {
+  padding: 10px 20px;
+  padding-left: 24px;
+  height: 48px;
+}
+
+/* шапка конец */
+
+/* Первый экран  */
+.hero {
+  background-image: url(../img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  color: var(--white);
+  min-height: 100vh;
+  padding-top: 205px;
+  padding-bottom: 205px;
+}
+
+.hero:before {
+  content: '';
+  display: block;
+  background: linear-gradient(90deg, rgba(19, 23, 48, 0.5), rgba(19, 23, 48, 0.5));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero__title {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  font-size: 80px;
+}
+
+.hero__text {
+  position: relative;
+  z-index: 2;
+
+}
+
+.hero__button {
+  position: relative;
+  z-index: 2;
+}
+
+/* Первый экран конец  */
+
+/* Преимущества  */
+.benefits {
+  background: var(--bluviolet);
+  color: var(--white);
+}
+
+.benefits__number {
+  margin-bottom: 7px;
+  display: block;
+}
+
+.benefits__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white);
+}
+
+/* Преимущества  конец */
+
+/* Мы предлагаем  */
+.offer {
+  background: var(--darkblue);
+  color: var(--white);
+}
+
+.offer__title {
+  color: inherit;
+  display: block;
+}
+
+.offer__item {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--white);
+}
+
+.offer__icon {
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* Мы предлагаем  конец */
+
+/* Цены  */
+
+.price__icon {
+  display: block;
+  margin-bottom: 16px;
+
+}
+
+.price__name {
+  display: block;
+  padding-bottom: 17px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.price__text {
+  display: block;
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.price__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  opacity: 0.5;
+  display: block;
+}
+
+.price__coust {
+  display: block;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  margin-bottom: 27px;
+}
+
+/* Цены  конец */
