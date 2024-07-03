@@ -212,6 +212,8 @@ input[type="radio"].visually-hidden {
   font-size: 32px;
   line-height: 125%;
   color: var(--darkblue);
+  margin-top: 61px;
+  margin-left:190px;
 }
 
 .title span {
@@ -268,8 +270,8 @@ input[type="radio"].visually-hidden {
   min-height: 100vh;
   padding-top: 205px;
   padding-bottom: 205px;
+  padding-left: 205px;
 }
-
 .hero:before {
   content: '';
   display: block;
@@ -289,12 +291,17 @@ input[type="radio"].visually-hidden {
   z-index: 2;
   color: inherit;
   font-size: 80px;
+  height: 280px;
+  width: 850px;
+  margin-top: 0px;
+  margin-left:0px;
 }
 
 .hero__text {
   position: relative;
   z-index: 2;
-
+  opacity: 0.7;
+  padding-bottom: 35px;
 }
 
 .hero__button {
@@ -308,8 +315,16 @@ input[type="radio"].visually-hidden {
 .benefits {
   background: var(--bluviolet);
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.benefits__list{
+  padding: 35px;
+  display: grid;
+  grid-template-columns: repeat(6, 240px);
+  grid-template-rows: repeat(2, 50px);
+}
 .benefits__number {
   margin-bottom: 7px;
   display: block;
@@ -328,13 +343,20 @@ input[type="radio"].visually-hidden {
 .offer {
   background: var(--darkblue);
   color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .offer__title {
   color: inherit;
   display: block;
 }
-
+.offer__list{
+  display: grid;
+  grid-template-columns: repeat(4, 230px);
+  grid-template-rows: repeat(2, 250px);
+  align-items: center;
+}
 .offer__item {
   font-weight: 500;
   font-size: 18px;
@@ -349,11 +371,19 @@ input[type="radio"].visually-hidden {
 /* Мы предлагаем  конец */
 
 /* Цены  */
-
+.price{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.price__list{
+  margin-top: 61px;
+  margin-bottom: 61px;
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+}
 .price__icon {
   display: block;
   margin-bottom: 16px;
-
 }
 
 .price__name {
@@ -361,6 +391,8 @@ input[type="radio"].visually-hidden {
   padding-bottom: 17px;
   margin-bottom: 20px;
   font-size: 24px;
+  margin-top: 0px;
+  margin-left:0px;
 }
 
 .price__text {
@@ -387,3 +419,77 @@ input[type="radio"].visually-hidden {
 }
 
 /* Цены  конец */
+
+/* FAQ  */
+.faq{
+  background-color: #F2F6F9;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.faq__list{
+  margin-top: 61px;
+  display: grid;
+  grid-template-rows: repeat(6, 100px);
+}
+.faq__question{
+  font-size: 24px;
+  list-style:none;
+}
+.faq__answer{
+  font-size: 18px;
+  opacity: 0.8;
+}
+/* FAQ конец */
+
+/*Footer*/
+.footer{
+  background: var(--darkblue);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer__title{
+  color: inherit;
+}
+.form__labe{
+  font-size: 16px;
+  opacity: 0.7;
+}
+.form__input, .form__textarea{
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--white);
+}
+.check{
+  font-size: 16px
+}
+.input--form-footer{
+  background: var(--white);
+  opacity: 0.2;
+}
+.personal__date{
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--green);
+}
+/*Footer конец*/
+
+/*Modal */
+.form--mod{
+  padding-left: 0;
+}
+.modal__text{
+  font-weight: 400;
+  font-size: 18px;
+}
+.label{
+  font-size: 24px;
+  color: var(--darkblue);
+}
+.input--form-mod{
+  background: var(--darkblue);
+  opacity: 0.2;
+}
+/*Modal конец*/

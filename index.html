@@ -372,7 +372,7 @@
     <!-- FAQ  -->
     <section class="faq">
 
-      <h2 class="visually-hidden">Частые вопросы</h2>
+      <h2 class="faq__title title">Частые вопросы</h2>
 
       <ul class="faq__list list-reset">
 
@@ -448,11 +448,11 @@
 
   <footer class="footer">
 
-    <h2 class="visually-hidden">Обсудить детали</h2>
+    <h2 class="footer__title title">Обсудить детали</h2>
 
     <form class="form">
 
-      <label for="nameUsers" class="form__label">Как вас зовут:</label>
+      <label for="nameUsers" class="form__labe">Как вас зовут:</label>
       <input type="text" class="form__input" id="nameUsers" placeholder="Ваше имя" required>
 
       <label for="Email" class="form__labe">E-mail:</label>
@@ -461,13 +461,13 @@
       <label for="telefon" class="form__labe">Телефон:</label>
       <input type="tel" class="form__input" id="telefon" placeholder="Ваш телефон" required>
 
-      <label for="comment" class="form__label">Комментарий:</label>
+      <label for="comment" class="form__labe">Комментарий:</label>
       <textarea id="comment" class="form__textarea" placeholder="Ваш комментарий"></textarea>
 
       <input type="checkbox" class="form__checkbox input input--form-footer" checked required id="check">
-      <label for="check" class="form__label ">
+      <label for="check" class="form__label check ">
         Я выражаю
-        <a href="#">согласие на обработку персональных данных</a></label>
+        <a href="#" class="personal__date">согласие на обработку персональных данных</a></label>
       <button type="submit" class="form__button button button--sudmit">Отправить</button>
 
     </form>
@@ -477,33 +477,25 @@
 
   <section class="modal">
 
-    <h2 class="visually-hidden">Бесплатная консультация</h2>
+    <h2 class="modal__title title">Бесплатная консультация</h2>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, doloribus nemo molestiae quidem nesciunt
-      fugiat tenetur sunt dolor. Sed dolor mollitia nam! Ea et libero repellat animi eaque, quia tenetur exercitationem
-      praesentium. Eius, reprehenderit? Repellendus magnam corrupti eveniet neque aliquid accusantium exercitationem
-      ipsa suscipit nobis dolorem dignissimos earum cupiditate quos iure, facere totam. Reiciendis error explicabo odit
-      adipisci iure debitis cupiditate nihil, amet ratione voluptas necessitatibus? Officia, fugit asperiores? Quaerat
-      ut accusantium harum nesciunt id? Voluptates, error nesciunt eos est sed cum quas provident quos odio! Nemo in
-      culpa odit numquam architecto esse repudiandae nisi consequuntur? Quos, tempore libero fugiat dignissimos est
-      aperiam molestias mollitia nesciunt quis minus obcaecati omnis error, praesentium deleniti eveniet sapiente.
-      Quaerat esse ducimus quam dolorum exercitationem recusandae.</p>
+    <p class="modal__text">Оставьте Ваши контактные данные и мы перезвоним в ближайшее время.</p>
 
     <form class="form form--mod">
 
-      <label class="form__label" for="nameUsers_modal">Как вас зовут:</label>
+      <label class="form__labe label" for="nameUsers_modal">Как вас зовут:</label>
       <input class="form__input" type="text" id="nameUsers_modal" placeholder="Ваше имя" required>
 
-      <label class="form__label" for="Email_modal">E-mail:</label>
+      <label class="form__labe label" for="Email_modal">E-mail:</label>
       <input class="form__input" type="email" id="Email_modal" placeholder="Электронная почта" required>
 
-      <label class="form__label" for="telefon_modal">Телефон:</label>
+      <label class="form__labe label" for="telefon_modal">Телефон:</label>
       <input class="form__input" type="tel" id="telefon_modal" placeholder="Ваш телефон" required>
 
-      <input class="visually-hidden" type="checkbox" checked id="check_modal" required>
-      <label class="form__label" for="check_modal">
+      <input class="form__checkbox input input--form-mod" type="checkbox" checked id="check_modal" required>
+      <label class="form__labe check" for="check_modal">
         Я выражаю
-        <a href="#">согласие на обработку персональных данных</a>
+        <a href="#"  class="personal__date">согласие на обработку персональных данных</a>
       </label>
       <button type="submit" class="modal__button button button--sudmit">Отправить</button>
 
