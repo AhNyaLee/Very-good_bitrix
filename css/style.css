@@ -294,7 +294,6 @@ input[type="radio"].visually-hidden {
   font-size: 24px;
   list-style: none;
   font-weight: 500;
-  font-size: 24px;
   line-height: 133%;
   color: var(--darkblue);
   cursor: pointer;
@@ -765,6 +764,8 @@ video {
 
 .form__input,
 .form__textarea {
+  max-width: 100%;
+  width: 100%;
   font-size: 24px;
   border: none;
   outline: none;
@@ -867,32 +868,6 @@ video {
   margin-bottom: 16px;
 }
 
-.form {}
-
-.form--mod {}
-
-.form__labe {}
-
-.label {}
-
-.form__input {}
-
-.form__checkbox {}
-
-.input {}
-
-.input--form-mod {}
-
-.check {}
-
-.form__date {}
-
-.modal__button {}
-
-.button {}
-
-.button--sudmit {}
-
 .close-button {
   border: none;
   background-color: transparent;
@@ -911,21 +886,6 @@ video {
 .close-button svg {
   flex-shrink: 0;
 }
-
-/* .modal__text {
-  font-weight: 400;
-  font-size: 18px;
-} */
-
-/* .label {
-  font-size: 24px;
-  color: var(--darkblue);
-}
-
-.input--form-mod {
-  background: var(--darkblue);
-  opacity: 0.2;
-} */
 
 
 
@@ -992,7 +952,8 @@ video {
   }
 }
 
-.header-sticky .header__logo {
+.header-sticky .header__logo,
+.header-sticky .header__tel{
   color: var(--darkblue);
 }
 
@@ -1000,9 +961,33 @@ video {
 @media (max-width: 1600px) {
 }
 @media (max-width: 1380px) {
+  .button{
+    gap: 10px;
+    font-weight: 650;
+  }
   .offer__list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 200px);
+  }
+  .button--social{
+    gap: 5px;
+    font-weight: 450;
+    font-size: 12px;
+    height: 40px;
+  }
+  .header__tel{
+    font-weight: 650;
+    font-size: 12px;
+  }
+  .header__logo{
+    width: 40px;
+  }
+  .header__contacts{
+    gap: 12px;
+  }
+  .hero__title{
+    font-size: 70px;
+    width: 650px;
   }
   .price__name{
     font-size: 20px;
@@ -1015,6 +1000,32 @@ video {
   }
 }
 @media (max-width: 1023px) {
+  .button--social{
+    gap: 0;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button--social svg{
+    flex-shrink: 0;
+    pointer-events: none;
+  }
+  .button--social span{
+    display: none;
+  }
+  .header__logo{
+    width: 35px;
+  }
+  .header__tel{
+    font-weight: 600;
+    font-size: 10px;
+  }
+  .hero__title{
+    font-size: 55px;
+    width: 550px;
+  }
   .section__grid{
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1030,9 +1041,51 @@ video {
   .service-card{
     padding-bottom: 40px;
   }
+  .accordion__question{
+    font-size: 20px;
+  }
+  .accordion__answer{
+    font-size: 15px;
+  }
+  .check{
+    font-size: 10px;
+  }
+  .form ::placeholder{
+    font-size: 20px;
+  }
+  .form__grid {
+    grid-template-columns: 1fr;
+  }
+  .form__grid-item--mod {
+    grid-column: initial;
+  }
+  .form__footer{
+    grid-template-columns:  1fr;
+  }
+
+  .form__grid-item{
+    grid-template-columns:  1fr;
+  }
 }
 @media (max-width: 767px) {
-
+  .header__logo{
+    width: 30px;
+  }
+  .header__tel{
+    font-weight: 550;
+    font-size: 10px;
+  }
+  .hero__title{
+    font-size: 40px;
+    width: 350px;
+  }
+  .hero__text{
+    font-size: 15px;
+  }
+  .button{
+    font-weight: 600;
+    font-size: 15px;
+  }
   .offer__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 150px);
@@ -1043,9 +1096,53 @@ video {
   .benefits__list{
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .form ::placeholder{
+    font-weight: 250PX;
+    font-size: 18px;
+  }
+  .form__labe {
+    font-size: 10px;
+  }
+
+  .form__input,
+  .form__textarea {
+    font-size: 8px;
+  }
+  .check Label{
+    width: auto;
+    font-size: 8px;
+  }
+
+  .form__accept::before {
+    width: 25px;
+    height: 25px;
+  }
+
+  .form__accept::after{
+    width: 12px;
+    height: 8px;
+  }
+
+  .form__grid-item {
+    grid-column: initial;
+  }
 }
 @media (max-width: 374px) {
-
+  .header__logo{
+    width: 25px;
+  }
+  .hero__title{
+    font-size: 30px;
+    width: 300px;
+  }
+  .hero__text{
+    font-size: 10px;
+  }
+  .button{
+    font-weight: 500;
+    font-size: 10px;
+  }
   .benefits__list{
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1065,4 +1162,30 @@ video {
   .price__coust{
     font-size: 20px;
   }
+  .form ::placeholder{
+    font-weight: 200PX;
+    font-size: 10px;
+  }
+  .form__labe {
+    font-size: 8px;
+  }
+  .form__input,
+  .form__textarea {
+    font-size: 8px;
+  }
+  .form__accept{
+    font-size: 6px;
+  }
+  .form__accept::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .form__accept::after{
+    width: 10px;
+    height: 6px;
+  }
+
+
 }
+
