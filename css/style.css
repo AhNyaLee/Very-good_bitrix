@@ -212,10 +212,10 @@ input[type="radio"].visually-hidden {
 }
 
 .button--telegram {
-  background-color: #1E96C8
+  background-color: #1E96C8;
 }
 .button--telegram:hover{
-  background-color: #14688c
+  background-color: #14688c;
 }
 .button__icon {}
 
@@ -223,7 +223,8 @@ input[type="radio"].visually-hidden {
   background-color: #43AD45;
 }
 .button--whatsap:hover {
-  background: #2e7a37  ;
+  background-color: #378f39;
+
 }
 /* Кнопка конец */
 
@@ -410,6 +411,7 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   line-height: 125%;
   color: var(--white);
+  opacity: all 0.3s;
 }
 .header__tel:hover{
   color: var(--green);
@@ -451,6 +453,18 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.video-bg__container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(19, 23, 48, 0.5), rgba(19, 23, 48, 0.5));
+  content: "";
+}
+
 video {
   object-fit: contain;
   overflow: clip;
@@ -477,7 +491,7 @@ video {
   flex-direction: column;
   justify-content: center;
   padding-top: 150px;
-  padding-bottom: 50px;
+  padding-bottom: 36px;
   min-height: 100vh;
 }
 
@@ -572,8 +586,8 @@ video {
 .offer__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 250px);
-  gap: 10px 32px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 55px 32px;
   align-items: center;
 }
 
@@ -589,7 +603,11 @@ video {
   margin-bottom: 24px;
   color: var(--green);
 }
-
+.offer__icon-blok{
+  height: 46px;
+  width: 42px;
+  margin-bottom: 10px;
+}
 
 .offer__item:hover .offer__icon{
   color: var(--bluviolet);
@@ -623,10 +641,9 @@ video {
 /* Цены  */
 
 .price__list {
-  margin-top: 61px;
-  margin-bottom: 61px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap:32px;
 }
 
 .price__icon {
@@ -696,9 +713,6 @@ video {
   background-color: #F2F6F9;
 }
 
-.faq__list {
-  margin-top: 60px;
-}
 
 /* FAQ конец */
 
@@ -810,7 +824,6 @@ video {
   align-items: center;
   justify-content: center;
   background-color: var(--darkblue-06);
-
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -961,6 +974,9 @@ video {
 @media (max-width: 1600px) {
 }
 @media (max-width: 1380px) {
+  .title{
+    font-size: 30px;
+  }
   .button{
     gap: 10px;
     font-weight: 650;
@@ -968,6 +984,9 @@ video {
   .offer__list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 200px);
+  }
+  .offer__title {
+    margin-top: 0;
   }
   .button--social{
     gap: 5px;
@@ -1000,6 +1019,7 @@ video {
   }
 }
 @media (max-width: 1023px) {
+
   .button--social{
     gap: 0;
     height: 48px;
@@ -1029,6 +1049,7 @@ video {
   .section__grid{
     grid-template-columns: repeat(1, 1fr);
   }
+
   .benefits__list{
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1068,13 +1089,39 @@ video {
   }
 }
 @media (max-width: 767px) {
+  .wrapper{
+    padding: 0px 20px;
+  }
+  .title{
+    font-size: 30px;
+  }
+  .button{
+    display: flex;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+  }
+  .button--social{
+    gap: 0;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .header__logo{
     width: 30px;
   }
   .header__tel{
     font-weight: 550;
-    font-size: 10px;
+    font-size: 14px;
   }
+  .hero__content {
+
+    padding-top: 60px;
+   padding-bottom: 0px;
+    min-height: 505px;
+}
   .hero__title{
     font-size: 40px;
     width: 350px;
@@ -1082,10 +1129,7 @@ video {
   .hero__text{
     font-size: 15px;
   }
-  .button{
-    font-weight: 600;
-    font-size: 15px;
-  }
+
   .offer__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 150px);
@@ -1099,19 +1143,19 @@ video {
 
   .form ::placeholder{
     font-weight: 250PX;
-    font-size: 18px;
+    font-size: 14px;
   }
   .form__labe {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .form__input,
   .form__textarea {
-    font-size: 8px;
+    font-size: 14px;
   }
   .check Label{
     width: auto;
-    font-size: 8px;
+    font-size: 14px;
   }
 
   .form__accept::before {
@@ -1121,14 +1165,32 @@ video {
 
   .form__accept::after{
     width: 12px;
-    height: 8px;
+    height: 14px;
   }
 
   .form__grid-item {
     grid-column: initial;
   }
+  .modal__body{
+    max-width: 400px ;
+    padding: 20px 20px 20px;
+  }
+
 }
 @media (max-width: 374px) {
+  .modal__body{
+    max-width: 340px ;
+    padding: 20px 20px 20px;
+  }
+  .title{
+    font-size: 24px;
+  }
+  .button{
+    width: 100%;
+  }
+  .hero__button{
+    font-size: 14px;
+  }
   .header__logo{
     width: 25px;
   }
@@ -1139,10 +1201,7 @@ video {
   .hero__text{
     font-size: 10px;
   }
-  .button{
-    font-weight: 500;
-    font-size: 10px;
-  }
+
   .benefits__list{
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1160,19 +1219,13 @@ video {
     font-size: 12px;
   }
   .price__coust{
-    font-size: 20px;
+    font-size: 40px;
   }
   .form ::placeholder{
     font-weight: 200PX;
     font-size: 10px;
   }
-  .form__labe {
-    font-size: 8px;
-  }
-  .form__input,
-  .form__textarea {
-    font-size: 8px;
-  }
+
   .form__accept{
     font-size: 6px;
   }
