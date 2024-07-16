@@ -1,3 +1,5 @@
+/* Переменные  */
+
 :root {
   --font-family: "Inter", sans-serif;
 
@@ -13,8 +15,11 @@
   --darkblue-06: rgba(19, 23, 48, 0.6);
 
 }
+/* КОНЕЦ Переменные  */
+
 
 /* Шрифты  */
+
 @font-face {
   font-family: 'Inter';
   src: url('../fonts/Inter-Regular.eot');
@@ -65,7 +70,9 @@
 
 /* Шрифты конец  */
 
+
 /* Базовые стили  */
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -122,7 +129,9 @@ input[type="number"] {
 
 /* Базовые стили конец  */
 
+
 /* Служебные классы  */
+
 .list-reset {
   margin: 0;
   padding: 0;
@@ -157,11 +166,32 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
 }
 
+.wrapper {
+  max-width: 1600px;
+  width: 100%;
+  padding: 0 48px;
+  margin: 0 auto;
+}
+
+.section__grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+::placeholder {
+  font-size: 24px;
+  font-weight: initial;
+}
+
 /* Служебные классы конец */
 
 /* --------------------- БЛОКИ ------------------------- */
 
 /* Кнопка  */
+
 .button {
   padding: 21px 30px;
   border: none;
@@ -181,13 +211,13 @@ input[type="radio"].visually-hidden {
   transition: all 0.3s;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
 
 .button span {
   position: relative;
   z-index: 2;
 }
-
 
 .button:after {
   content: '';
@@ -222,7 +252,6 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
-
 .button--social {
   display: grid;
   gap: 12px;
@@ -252,10 +281,30 @@ input[type="radio"].visually-hidden {
   background-color: #43AD45;
 }
 
+.close-button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button svg {
+  flex-shrink: 0;
+}
+
 /* Кнопка конец */
 
 
 /* заголовки */
+
 .title {
   display: block;
   margin: 0;
@@ -271,20 +320,8 @@ input[type="radio"].visually-hidden {
 
 /* заголовки конец */
 
-.wrapper {
-  max-width: 1600px;
-  width: 100%;
-  padding: 0 48px;
-  margin: 0 auto;
-}
 
-.section__grid {
-  display: grid;
-  gap: 32px;
-  grid-template-columns: 1fr 2fr;
-  padding-top: 60px;
-  padding-bottom: 70px;
-}
+/* Аккордеон */
 
 .accordion {
   padding: 24px 0;
@@ -324,7 +361,6 @@ input[type="radio"].visually-hidden {
   line-height: 133%;
   color: var(--darkblue);
   cursor: pointer;
-  /* margin-bottom: 22px; */
 }
 
 .accordion__question--mod {
@@ -332,17 +368,13 @@ input[type="radio"].visually-hidden {
   gap: 12px;
   grid-template-columns: 1fr 26px;
   align-items: center;
-  padding-right: 38px;
 }
 
 .accordion__question--mod2 {
   display: flex;
   align-items: center;
-  /* padding-right: 38px; */
   position: relative;
   justify-content: space-between;
-
-
 }
 
 .accordion:hover::before {
@@ -360,21 +392,6 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
-
-/* .accordion__question--mod2::after {
-  content: "";
-  display: block;
-  width: 26px;
-  height: 26px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='26' height='15' viewBox='0 0 26 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L13 13L25 0.999998' stroke='%235B48FC' stroke-width='2'/%3e%3c/svg%3e ");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin-left: 12px;
-  flex-shrink: 0;
-
-} */
-
 .accordion__question::marker {
   display: none;
 }
@@ -386,9 +403,12 @@ input[type="radio"].visually-hidden {
   padding-top: 20px;
 }
 
+/* Аккордеон конец */
+
 /* --------------------- КОНЕЦ БЛОКИ ------------------------- */
 
 /* --------------------- СЕКЦИИ ------------------------- */
+
 /* шапка  */
 .header {
   position: fixed;
@@ -445,10 +465,11 @@ input[type="radio"].visually-hidden {
 
 }
 
-
 /* шапка конец */
 
+
 /* Первый экран  */
+
 .hero {
   background-repeat: no-repeat;
   background-size: cover;
@@ -546,7 +567,9 @@ video {
 
 /* Первый экран конец  */
 
+
 /* Преимущества  */
+
 .benefits {
   background: var(--bluviolet);
   color: var(--white);
@@ -600,7 +623,9 @@ video {
 
 /* Преимущества  конец */
 
+
 /* Мы предлагаем  */
+
 .offer {
   background: var(--darkblue);
   color: var(--white);
@@ -670,6 +695,7 @@ video {
 
 /* Мы предлагаем  конец */
 
+
 /* Цены  */
 
 .price__list {
@@ -704,6 +730,7 @@ video {
   margin: 0;
   font-size: 18px;
   margin-bottom: 28px;
+  margin-top: auto;
 }
 
 .price__label {
@@ -714,7 +741,13 @@ video {
   display: block;
 }
 
-.price__coust {
+.price__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.price__cost {
   display: block;
   font-weight: 700;
   font-size: 40px;
@@ -743,15 +776,18 @@ video {
 
 /* Цены  конец */
 
+
 /* FAQ  */
+
 .faq {
   background-color: #F2F6F9;
 }
 
-
 /* FAQ конец */
 
+
 /*Footer*/
+
 .footer {
   background: var(--darkblue);
   color: var(--white);
@@ -761,7 +797,7 @@ video {
   color: inherit;
 }
 
-.form ::placeholder {
+::placeholder {
   font-weight: 300;
   font-size: 24px;
   line-height: 133%;
@@ -800,7 +836,6 @@ video {
 .form__grid-item:hover::after {
   background-color: var(--bluviolet);
   opacity: 1;
-
 }
 
 
@@ -851,7 +886,9 @@ video {
 
 /*Footer конец*/
 
+
 /*Modal */
+
 .modal {
   position: fixed;
   z-index: 9999;
@@ -921,27 +958,6 @@ video {
   margin-bottom: 16px;
 }
 
-.close-button {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  right: 20px;
-  top: 17px;
-  cursor: pointer;
-  padding: 0;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.close-button svg {
-  flex-shrink: 0;
-}
-
-
-
 .form__accept {
   position: relative;
   padding: 6px 0;
@@ -996,6 +1012,7 @@ video {
 
 
 /* Активности  */
+
 .header-sticky {
   .header {
     padding-top: 10px;
@@ -1011,20 +1028,13 @@ video {
   color: var(--darkblue);
 }
 
-.price__item {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+/* конец Активности  */
 
-.price__label {
-  margin-top: auto;
-}
 
 /* Медиа запросы */
-@media (max-width: 1600px) {}
 
 @media (max-width: 1380px) {
+  /* Заголовки */
   .title {
     font-size: 30px;
   }
@@ -1078,12 +1088,15 @@ video {
     font-size: 15px;
   }
 
-  .price__coust {
+  .price__cost {
     font-size: 35px;
   }
 }
 
 @media (max-width: 1023px) {
+  .accordion__question--mod {
+    padding: 0;
+  }
 
   .button--social {
     gap: 0;
@@ -1105,11 +1118,6 @@ video {
 
   .header__logo {
     width: 35px;
-  }
-
-  .header__tel {
-    font-weight: 600;
-    font-size: 10px;
   }
 
   .hero__title {
@@ -1137,10 +1145,6 @@ video {
 
   .accordion__answer {
     font-size: 15px;
-  }
-
-  .form ::placeholder {
-    font-size: 20px;
   }
 
   .form__grid {
@@ -1190,12 +1194,13 @@ video {
     font-size: 30px;
   }
 
-  .button {
+.button {
     display: flex;
     max-width: 100%;
     width: 100%;
     align-content: center;
     justify-content: center;
+    padding: 15px 55px;
   }
 
   .button--social {
@@ -1245,11 +1250,6 @@ video {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .form ::placeholder {
-    font-weight: 250PX;
-    font-size: 14px;
-  }
-
   .form__labe {
     font-size: 16px;
   }
@@ -1270,33 +1270,46 @@ video {
   }
 
   .form__accept::after {
-    width: 12px;
-    height: 14px;
+    width: 14px;
+    top: 8px;
+    left: 7px;
+    height: 10px;
   }
+
+  .form__accept {
+    padding-left: calc(16px + 13px);
+    font-size: 13px;
+    line-height: 1px;
+}
 
   .form__grid-item {
     grid-column: initial;
   }
 
   .modal__body {
-    max-width: 400px;
-    padding: 20px 20px 20px;
+    padding: 42px 20px 20px;
+    max-width: 100%;
   }
-
+  .modal__title{
+    font-size: 20px  !important;
+  }
+  .modal .form__grid {
+    gap: 0px;
+  }
+  .form__labe {
+    font-size: 12px;
 }
-
-@media (max-width: 374px) {
-  .modal__body {
-    max-width: 340px;
-    padding: 20px 20px 20px;
-  }
-
+.modal__text {
+  margin: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 15px;
+}
+.modal::placeholder{
+  font-size: 12px;
+}
   .title {
     font-size: 24px;
-  }
-
-  .button {
-    width: 100%;
   }
 
   .hero__button {
@@ -1312,17 +1325,10 @@ video {
     width: 300px;
   }
 
-  .hero__text {
-    font-size: 10px;
-  }
-
   .benefits__list {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .benefits__item {
-    font-size: 10px;
-  }
 
   .offer__list {
     grid-template-columns: repeat(1, 1fr);
@@ -1337,27 +1343,33 @@ video {
     font-size: 12px;
   }
 
-  .price__coust {
+  .price__cost {
     font-size: 40px;
   }
 
-  .form ::placeholder {
-    font-weight: 200PX;
-    font-size: 10px;
-  }
-
-  .form__accept {
-    font-size: 6px;
-  }
 
   .form__accept::before {
     width: 24px;
     height: 24px;
   }
+  .modal__body{
+    width:0;
+  }
 
-  .form__accept::after {
-    width: 10px;
-    height: 6px;
+  .button--social {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    padding: 0;
+  }
+
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  ::placeholder {
+    font-size: 20px;
   }
 
 
