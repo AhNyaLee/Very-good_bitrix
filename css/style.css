@@ -136,7 +136,8 @@ input[type="number"] {
   transition: transform .2s, -webkit-transform .2s;
 }
 
-.click:hover, .click:focus {
+.click:hover,
+.click:focus {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
@@ -178,7 +179,15 @@ input[type="radio"].visually-hidden {
   grid-template-columns: 1fr auto;
   align-items: center;
   transition: all 0.3s;
+  overflow: hidden;
+  cursor: pointer;
 }
+
+.button span {
+  position: relative;
+  z-index: 2;
+}
+
 
 .button:after {
   content: '';
@@ -189,11 +198,30 @@ input[type="radio"].visually-hidden {
   background-position: center;
   width: 8px;
   height: 12px;
+  z-index: 2;
 }
 
-.button:hover {
-  background-color: #2f22a5;
+.button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 23, 48, .25);
+  transition: opacity .3s;
+  content: "";
+  pointer-events: none;
+  opacity: 0;
 }
+
+.button:hover::before,
+.button:active::before,
+.button:focus::before {
+  opacity: 1;
+}
+
 
 .button--social {
   display: grid;
@@ -207,6 +235,11 @@ input[type="radio"].visually-hidden {
   height: 48px;
 }
 
+.button__icon {
+  position: relative;
+  z-index: 2;
+}
+
 .button--social:after {
   display: none;
 }
@@ -214,18 +247,11 @@ input[type="radio"].visually-hidden {
 .button--telegram {
   background-color: #1E96C8;
 }
-.button--telegram:hover{
-  background-color: #14688c;
-}
-.button__icon {}
 
 .button--whatsap {
   background-color: #43AD45;
 }
-.button--whatsap:hover {
-  background-color: #378f39;
 
-}
 /* Кнопка конец */
 
 
@@ -319,17 +345,17 @@ input[type="radio"].visually-hidden {
 
 }
 
-.accordion:hover::before{
+.accordion:hover::before {
   background: var(--darkblue);
   opacity: 1;
 }
 
-.faq__item:last-of-type .accordion:hover::after{
+.faq__item:last-of-type .accordion:hover::after {
   background: var(--darkblue);
   opacity: 1;
 }
 
-.faq__item:has(.accordion:hover) + .faq__item .accordion::before{
+.faq__item:has(.accordion:hover)+.faq__item .accordion::before {
   background: var(--darkblue);
   opacity: 1;
 }
@@ -411,9 +437,10 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   line-height: 125%;
   color: var(--white);
-  opacity: all 0.3s;
+  transition: all 0.3s;
 }
-.header__tel:hover{
+
+.header__tel:hover {
   color: var(--green);
 
 }
@@ -561,7 +588,8 @@ video {
   background-color: var(--white);
   transition: width 0.3s ease;
 }
-.benefits__item:hover .benefits__number::after{
+
+.benefits__item:hover .benefits__number::after {
   content: "";
   display: block;
   width: 30%;
@@ -596,29 +624,33 @@ video {
   font-size: 18px;
   color: var(--white);
   position: relative;
+  padding-bottom: 20px;
+
 }
 
 .offer__icon {
   display: block;
   margin-bottom: 24px;
   color: var(--green);
+  transition: all 0.3s;
 }
-.offer__icon-blok{
+
+.offer__icon-blok {
   height: 46px;
   width: 42px;
   margin-bottom: 10px;
 }
 
-.offer__item:hover .offer__icon{
+.offer__item:hover .offer__icon {
   color: var(--bluviolet);
 }
 
-.offer__item::after{
+.offer__item::after {
   content: "";
   display: block;
   position: absolute;
-  top:140px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   width: 1px;
   opacity: 0;
   height: 1px;
@@ -626,11 +658,11 @@ video {
   transition: width 0.3s ease;
 }
 
-.offer__item:hover::after{
+.offer__item:hover::after {
   content: "";
   display: block;
   position: absolute;
-  width: 80%;
+  width: 80px;
   height: 1px;
   opacity: 1;
   background-color: var(--white);
@@ -643,18 +675,20 @@ video {
 .price__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap:32px;
+  gap: 32px;
 }
 
 .price__icon {
   display: block;
   margin-bottom: 16px;
   color: var(--green);
+  transition: all 0.3s;
 }
 
-.service-card:hover .price__icon{
+.service-card:hover .price__icon {
   color: var(--bluviolet);
 }
+
 .price__name {
   display: block;
   padding-bottom: 17px;
@@ -696,16 +730,17 @@ video {
   width: 48px;
   height: 1px;
   background: var(--darkblue);
-  transition: opacity .3s,color .3s,width .3s;
+  transition: opacity .3s, color .3s, width .3s;
   content: "";
   opacity: .2;
 }
 
-.service-card:hover .price__name::after{
+.service-card:hover .price__name::after {
   width: 80px;
   background: var(--bluviolet);
   opacity: 1;
 }
+
 /* Цены  конец */
 
 /* FAQ  */
@@ -744,7 +779,7 @@ video {
   grid-column: span 4;
   display: grid;
   gap: 12px;
-  align-items: center;
+  align-items: flex-start;
   grid-template-columns: 116px 1fr;
   position: relative;
 }
@@ -754,16 +789,18 @@ video {
   display: block;
   width: 100%;
   height: 1px;
-  background: var(--white);
+  background-color: var(--white);
   opacity: 0.2;
   position: absolute;
   bottom: 0;
   left: 0;
+  transition: background-color 0.3s, opacity 0.3s;
 }
 
-.form__grid-item:hover::after{
-  background: var(--bluviolet);
+.form__grid-item:hover::after {
+  background-color: var(--bluviolet);
   opacity: 1;
+
 }
 
 
@@ -774,6 +811,7 @@ video {
 .form__labe {
   font-size: 16px;
   opacity: 0.7;
+  padding: 23px 0;
 }
 
 .form__input,
@@ -787,6 +825,7 @@ video {
   color: var(--white);
   padding: 17px 0;
   height: 70px;
+  min-height: 70px;
 }
 
 .check {
@@ -806,7 +845,7 @@ video {
   align-items: center;
 }
 
-.form__date:hover{
+.form__date:hover {
   color: var(--bluviolet);
 }
 
@@ -857,6 +896,7 @@ video {
 .modal .form__textarea {
   padding: 15px 0;
   height: 55px;
+  color: inherit;
 }
 
 .modal .form__footer {
@@ -947,7 +987,8 @@ video {
 .form__custom-checkbox input:checked+label::after {
   opacity: 1;
 }
-.form__custom-checkbox .form__accept:hover::before{
+
+.form__custom-checkbox .form__accept:hover::before {
   background: var(--bluviolet);
 }
 
@@ -966,61 +1007,85 @@ video {
 }
 
 .header-sticky .header__logo,
-.header-sticky .header__tel{
+.header-sticky .header__tel {
   color: var(--darkblue);
 }
 
-/* Медиа запросы */
-@media (max-width: 1600px) {
+.price__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+.price__label {
+  margin-top: auto;
+}
+
+/* Медиа запросы */
+@media (max-width: 1600px) {}
+
 @media (max-width: 1380px) {
-  .title{
+  .title {
     font-size: 30px;
   }
-  .button{
+
+  .button {
     gap: 10px;
     font-weight: 650;
   }
+
   .offer__list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 200px);
   }
+
   .offer__title {
     margin-top: 0;
   }
-  .button--social{
+
+  .button--social {
     gap: 5px;
     font-weight: 450;
     font-size: 12px;
     height: 40px;
   }
-  .header__tel{
+
+  .header__tel {
     font-weight: 650;
     font-size: 12px;
   }
-  .header__logo{
+
+  .header__logo {
     width: 40px;
   }
-  .header__contacts{
+
+  .header__contacts {
     gap: 12px;
   }
-  .hero__title{
+
+  .hero__title {
     font-size: 70px;
     width: 650px;
   }
-  .price__name{
+
+
+
+  .price__name {
     font-size: 20px;
   }
-  .price__text{
+
+  .price__text {
     font-size: 15px;
   }
-  .price__coust{
+
+  .price__coust {
     font-size: 35px;
   }
 }
+
 @media (max-width: 1023px) {
 
-  .button--social{
+  .button--social {
     gap: 0;
     height: 48px;
     width: 48px;
@@ -1028,80 +1093,112 @@ video {
     justify-content: center;
     align-items: center;
   }
-  .button--social svg{
+
+  .button--social svg {
     flex-shrink: 0;
     pointer-events: none;
   }
-  .button--social span{
+
+  .button--social span {
     display: none;
   }
-  .header__logo{
+
+  .header__logo {
     width: 35px;
   }
-  .header__tel{
+
+  .header__tel {
     font-weight: 600;
     font-size: 10px;
   }
-  .hero__title{
+
+  .hero__title {
     font-size: 55px;
     width: 550px;
   }
-  .section__grid{
+
+  .section__grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .benefits__list{
+  .benefits__list {
     grid-template-columns: repeat(3, 1fr);
   }
-  .benefits__item{
+
+  .benefits__item {
     font-size: 15px;
   }
-  .price__list{
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .service-card{
-    padding-bottom: 40px;
-  }
-  .accordion__question{
+
+
+
+  .accordion__question {
     font-size: 20px;
   }
-  .accordion__answer{
+
+  .accordion__answer {
     font-size: 15px;
   }
-  .check{
-    font-size: 10px;
-  }
-  .form ::placeholder{
+
+  .form ::placeholder {
     font-size: 20px;
   }
+
   .form__grid {
     grid-template-columns: 1fr;
   }
+
+  .form__grid-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+    grid-column: initial;
+  }
+
   .form__grid-item--mod {
     grid-column: initial;
   }
-  .form__footer{
-    grid-template-columns:  1fr;
+
+  .form__labe {
+    padding: 0;
   }
 
-  .form__grid-item{
-    grid-template-columns:  1fr;
+  .form__input,
+  .form__textarea {
+    font-size: 20px;
+    padding: 12px 0;
+    height: 60px;
+    min-height: 60px;
+    width: 100%;
+    max-width: 100%;
   }
 }
+
 @media (max-width: 767px) {
-  .wrapper{
+  .form__footer {
+    grid-template-columns: 1fr;
+  }
+
+  .price__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .wrapper {
     padding: 0px 20px;
   }
-  .title{
+
+  .title {
     font-size: 30px;
   }
-  .button{
+
+  .button {
     display: flex;
     max-width: 100%;
+    width: 100%;
     align-content: center;
     justify-content: center;
   }
-  .button--social{
+
+  .button--social {
     gap: 0;
     height: 48px;
     width: 48px;
@@ -1109,24 +1206,29 @@ video {
     justify-content: center;
     align-items: center;
   }
-  .header__logo{
+
+  .header__logo {
     width: 30px;
   }
-  .header__tel{
+
+  .header__tel {
     font-weight: 550;
     font-size: 14px;
   }
+
   .hero__content {
 
     padding-top: 60px;
-   padding-bottom: 0px;
+    padding-bottom: 0px;
     min-height: 505px;
-}
-  .hero__title{
+  }
+
+  .hero__title {
     font-size: 40px;
     width: 350px;
   }
-  .hero__text{
+
+  .hero__text {
     font-size: 15px;
   }
 
@@ -1134,26 +1236,30 @@ video {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 150px);
   }
-  .offer__text{
+
+  .offer__text {
     font-size: 15px;
   }
-  .benefits__list{
+
+  .benefits__list {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .form ::placeholder{
+  .form ::placeholder {
     font-weight: 250PX;
     font-size: 14px;
   }
+
   .form__labe {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .form__input,
   .form__textarea {
-    font-size: 14px;
+    font-size: 20px;
   }
-  .check Label{
+
+  .check Label {
     width: auto;
     font-size: 14px;
   }
@@ -1163,7 +1269,7 @@ video {
     height: 25px;
   }
 
-  .form__accept::after{
+  .form__accept::after {
     width: 12px;
     height: 14px;
   }
@@ -1171,74 +1277,88 @@ video {
   .form__grid-item {
     grid-column: initial;
   }
-  .modal__body{
-    max-width: 400px ;
+
+  .modal__body {
+    max-width: 400px;
     padding: 20px 20px 20px;
   }
 
 }
+
 @media (max-width: 374px) {
-  .modal__body{
-    max-width: 340px ;
+  .modal__body {
+    max-width: 340px;
     padding: 20px 20px 20px;
   }
-  .title{
+
+  .title {
     font-size: 24px;
   }
-  .button{
+
+  .button {
     width: 100%;
   }
-  .hero__button{
+
+  .hero__button {
     font-size: 14px;
   }
-  .header__logo{
+
+  .header__logo {
     width: 25px;
   }
-  .hero__title{
+
+  .hero__title {
     font-size: 30px;
     width: 300px;
   }
-  .hero__text{
+
+  .hero__text {
     font-size: 10px;
   }
 
-  .benefits__list{
+  .benefits__list {
     grid-template-columns: repeat(1, 1fr);
   }
-  .benefits__item{
+
+  .benefits__item {
     font-size: 10px;
   }
+
   .offer__list {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 96px);
   }
-  .price__name{
+
+  .price__name {
     font-size: 15px;
   }
-  .price__text{
+
+  .price__text {
     font-size: 12px;
   }
-  .price__coust{
+
+  .price__coust {
     font-size: 40px;
   }
-  .form ::placeholder{
+
+  .form ::placeholder {
     font-weight: 200PX;
     font-size: 10px;
   }
 
-  .form__accept{
+  .form__accept {
     font-size: 6px;
   }
+
   .form__accept::before {
     width: 24px;
     height: 24px;
   }
 
-  .form__accept::after{
+  .form__accept::after {
     width: 10px;
     height: 6px;
   }
 
 
 }
-
