@@ -15,6 +15,7 @@
   --darkblue-06: rgba(19, 23, 48, 0.6);
 
 }
+
 /* КОНЕЦ Переменные  */
 
 
@@ -1034,23 +1035,19 @@ video {
 /* Медиа запросы */
 
 @media (max-width: 1380px) {
+
   /* Заголовки */
   .title {
     font-size: 30px;
   }
 
+  /* конец Заголовки */
+
+
+  /* Кнопки */
   .button {
     gap: 10px;
     font-weight: 650;
-  }
-
-  .offer__list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 200px);
-  }
-
-  .offer__title {
-    margin-top: 0;
   }
 
   .button--social {
@@ -1059,6 +1056,14 @@ video {
     font-size: 12px;
     height: 40px;
   }
+
+  /* конец Кнопки */
+  .offer__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+  }
+
+  /* Шапка */
 
   .header__tel {
     font-weight: 650;
@@ -1073,13 +1078,26 @@ video {
     gap: 12px;
   }
 
+  /* конец Шапка */
+
+
+  /* Мы предлагаем */
+  .offer__title {
+    margin-top: 0;
+  }
+
+  /* конец Мы предлагаем */
+
+
+  /* Первый экран */
   .hero__title {
     font-size: 70px;
     width: 650px;
   }
 
+  /* конец Первый экран */
 
-
+  /* Цены */
   .price__name {
     font-size: 20px;
   }
@@ -1091,13 +1109,28 @@ video {
   .price__cost {
     font-size: 35px;
   }
+
+  /* конц Цены */
 }
 
 @media (max-width: 1023px) {
+  /* Аккордеон */
+
   .accordion__question--mod {
     padding: 0;
   }
 
+  .accordion__question {
+    font-size: 20px;
+  }
+
+  .accordion__answer {
+    font-size: 15px;
+  }
+
+  /* конец Аккордеон */
+
+  /* Кнопки */
   .button--social {
     gap: 0;
     height: 48px;
@@ -1116,18 +1149,28 @@ video {
     display: none;
   }
 
+  /* конец Кнопки */
+
+  /* Шапка */
   .header__logo {
     width: 35px;
   }
 
+  /* конец Шапка */
+
+  /* Первый экран */
   .hero__title {
     font-size: 55px;
     width: 550px;
   }
 
+  /*конец Первый экран */
+
   .section__grid {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  /* Преимущества */
 
   .benefits__list {
     grid-template-columns: repeat(3, 1fr);
@@ -1137,15 +1180,9 @@ video {
     font-size: 15px;
   }
 
+  /* конец Преимущества */
 
-
-  .accordion__question {
-    font-size: 20px;
-  }
-
-  .accordion__answer {
-    font-size: 15px;
-  }
+  /* Форма */
 
   .form__grid {
     grid-template-columns: 1fr;
@@ -1174,27 +1211,37 @@ video {
     width: 100%;
     max-width: 100%;
   }
+
+  /* конец Форма */
 }
 
 @media (max-width: 767px) {
-  .form__footer {
-    grid-template-columns: 1fr;
-  }
 
-  .price__list {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 40px;
-  }
-
-  .wrapper {
-    padding: 0px 20px;
-  }
+  /* Заголовок */
 
   .title {
     font-size: 30px;
   }
 
-.button {
+  /* конец Заголовок */
+
+
+  /* Служебный класс */
+
+  .wrapper {
+    padding: 0px 20px;
+  }
+
+  ::placeholder {
+    font-size: 20px;
+  }
+
+  /* конец Служебный класс */
+
+
+  /* Кнопки */
+
+  .button {
     display: flex;
     max-width: 100%;
     width: 100%;
@@ -1204,23 +1251,34 @@ video {
   }
 
   .button--social {
-    gap: 0;
-    height: 48px;
-    width: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    padding: 0;
   }
+  /* конец Кнопки */
 
-  .header__logo {
-    width: 30px;
-  }
+
+  /* Шапка */
 
   .header__tel {
     font-weight: 550;
     font-size: 14px;
   }
 
+  .header__logo {
+    width: 30px;
+  }
+
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* конец Шапка */
+
+
+  /* Первый экран */
   .hero__content {
 
     padding-top: 60px;
@@ -1237,17 +1295,59 @@ video {
     font-size: 15px;
   }
 
+  .hero__button {
+    font-size: 14px;
+  }
+
+  /* конец Первый экран */
+
+
+  /* Преимущества */
+
+   .benefits__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+   /* конец Преимущества */
+
+   /* Мы предлагаем */
+
   .offer__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 150px);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .offer__text {
     font-size: 15px;
   }
 
-  .benefits__list {
-    grid-template-columns: repeat(2, 1fr);
+  /* конец Мы предлагаем */
+
+
+  /* Цены */
+
+  .price__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .price__name {
+    font-size: 15px;
+  }
+
+  .price__text {
+    font-size: 12px;
+  }
+
+  .price__cost {
+    font-size: 40px;
+  }
+
+  /* конец Цены */
+
+  /* Форма */
+  .form__footer {
+    grid-template-columns: 1fr;
   }
 
   .form__labe {
@@ -1277,10 +1377,10 @@ video {
   }
 
   .form__accept {
-    padding-left: calc(16px + 13px);
-    font-size: 13px;
-    line-height: 1px;
-}
+    padding-left: calc(24px + 12px);
+    font-size: 12px;
+    line-height: 120%;
+  }
 
   .form__grid-item {
     grid-column: initial;
@@ -1290,87 +1390,40 @@ video {
     padding: 42px 20px 20px;
     max-width: 100%;
   }
-  .modal__title{
-    font-size: 20px  !important;
+
+  .modal__title {
+    font-size: 20px !important;
   }
+
   .modal .form__grid {
     gap: 0px;
   }
+
   .form__labe {
     font-size: 12px;
-}
-.modal__text {
-  margin: 0;
-  margin-bottom: 0;
-  font-size: 16px;
-  line-height: 15px;
-}
-.modal::placeholder{
-  font-size: 12px;
-}
-  .title {
-    font-size: 24px;
+    margin-bottom: -20px;
+    padding-top: 10px;
   }
 
-  .hero__button {
+  .modal__text {
+    margin: 0;
+    margin-bottom: 12px;
     font-size: 14px;
+    line-height: 120%;
   }
 
-  .header__logo {
-    width: 25px;
-  }
-
-  .hero__title {
-    font-size: 30px;
-    width: 300px;
-  }
-
-  .benefits__list {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-
-  .offer__list {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 96px);
-  }
-
-  .price__name {
-    font-size: 15px;
-  }
-
-  .price__text {
+  .modal::placeholder {
     font-size: 12px;
   }
-
-  .price__cost {
-    font-size: 40px;
-  }
-
 
   .form__accept::before {
     width: 24px;
     height: 24px;
   }
-  .modal__body{
-    width:0;
+
+  .modal__body {
+    width: 0;
   }
 
-  .button--social {
-    height: 40px;
-    width: 40px;
-    position: relative;
-    padding: 0;
-  }
-
-  .header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  ::placeholder {
-    font-size: 20px;
-  }
-
-
+  /* конец Форма */
 }
