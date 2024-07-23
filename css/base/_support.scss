@@ -1,0 +1,35 @@
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visually-hidden:not(:focus),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+.wrapper {
+  max-width: 1600px;
+  width: 100%;
+  padding: 0 48px;
+  margin: 0 auto;
+}
+
+.section__grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}

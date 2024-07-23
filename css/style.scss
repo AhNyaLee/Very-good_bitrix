@@ -1,0 +1,32 @@
+// Базовые стили
+@import "./base/root";
+@import "./base/fonts";
+@import "./base/global";
+@import "./base/support";
+
+// Блоки
+@import "./blocks/button";
+@import "./blocks/title";
+
+/*СЕКЦИИ */
+
+@import "./section/header";
+@import "./section/firstscreen";
+@import "./section/benefits";
+@import "./section/offer";
+@import "./section/price";
+@import "./section/faq";
+@import "./section/modal";
+@import "./section/footer";
+
+/* Активности  */
+@import "./activity/header-sticky";
+
+// Эффекты\
+@import "./effects/click";
+
+//Медиа
+@import "./media/1380";
+@import "./media/1023";
+@import "./media/767";
+

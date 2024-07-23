@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  transition: all 0.3s;
+}
+
+.header__grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.header__contacts {
+  max-width: max-content;
+  margin: 0;
+  margin-left: auto;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  width: 48px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.header__logo:hover,
+.header__logo:focus,
+.header__logo:active {
+  color: var(--green);
+  scale: 1.05;
+}
+
+.header__tel {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.header__tel:hover {
+  color: var(--green);
+
+}

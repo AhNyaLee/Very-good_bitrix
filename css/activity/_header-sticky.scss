@@ -1,0 +1,14 @@
+.header-sticky {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--white);
+    color: var(--darkblue);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.header-sticky .header__logo,
+.header-sticky .header__tel {
+  color: var(--darkblue);
+}

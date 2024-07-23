@@ -1,0 +1,78 @@
+@media (max-width: 1380px) {
+
+  /* Заголовки */
+  .title {
+    font-size: 30px;
+  }
+
+  /* конец Заголовки */
+
+
+  /* Кнопки */
+  .button {
+    gap: 10px;
+    font-weight: 650;
+  }
+
+  .button--social {
+    gap: 5px;
+    font-weight: 450;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  /* конец Кнопки */
+  .offer__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+  }
+
+  /* Шапка */
+
+  .header__tel {
+    font-weight: 650;
+    font-size: 12px;
+  }
+
+  .header__logo {
+    width: 40px;
+  }
+
+  .header__contacts {
+    gap: 12px;
+  }
+
+  /* конец Шапка */
+
+
+  /* Мы предлагаем */
+  .offer__title {
+    margin-top: 0;
+  }
+
+  /* конец Мы предлагаем */
+
+
+  /* Первый экран */
+  .hero__title {
+    font-size: 70px;
+    width: 650px;
+  }
+
+  /* конец Первый экран */
+
+  /* Цены */
+  .price__name {
+    font-size: 20px;
+  }
+
+  .price__text {
+    font-size: 15px;
+  }
+
+  .price__cost {
+    font-size: 35px;
+  }
+
+  /* конц Цены */
+}
