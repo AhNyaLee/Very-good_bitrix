@@ -1,17 +1,21 @@
 @media (max-width: 1023px) {
   /* Аккордеон */
 
-  .accordion__question--mod {
-    padding: 0;
+  .accordion{
+
+    &__question--mod {
+      padding: 0;
+    }
+
+    &__question {
+      font-size: 20px;
+    }
+
+    &__answer {
+      font-size: 15px;
+    }
   }
 
-  .accordion__question {
-    font-size: 20px;
-  }
-
-  .accordion__answer {
-    font-size: 15px;
-  }
 
   /* конец Аккордеон */
 
@@ -23,16 +27,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .button--social svg {
+
+  & svg {
     flex-shrink: 0;
     pointer-events: none;
   }
 
-  .button--social span {
+  & span {
     display: none;
   }
+  }
+
 
   /* конец Кнопки */
 
@@ -69,32 +75,36 @@
 
   /* Форма */
 
-  .form__grid {
-    grid-template-columns: 1fr;
-  }
+  .form{
 
-  .form__grid-item {
-    grid-template-columns: 1fr;
-    gap: 0;
-    grid-column: initial;
-  }
+    &__grid {
+      grid-template-columns: 1fr;
+    }
 
-  .form__grid-item--mod {
-    grid-column: initial;
-  }
+    &__grid-item {
+      grid-template-columns: 1fr;
+      gap: 0;
+      grid-column: initial;
+    }
 
-  .form__labe {
-    padding: 0;
-  }
+    &__grid-item--mod {
+      grid-column: initial;
+    }
 
-  .form__input,
-  .form__textarea {
-    font-size: 20px;
-    padding: 12px 0;
-    height: 60px;
-    min-height: 60px;
-    width: 100%;
-    max-width: 100%;
+    &__labe {
+      padding: 0;
+    }
+
+    &__input,
+    &__textarea {
+      font-size: 20px;
+      padding: 12px 0;
+      height: 60px;
+      min-height: 60px;
+      width: 100%;
+      max-width: 100%;
+    }
+
   }
 
   /* конец Форма */

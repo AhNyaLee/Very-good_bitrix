@@ -1,66 +1,69 @@
 .offer {
   background: var(--darkblue);
   color: var(--white);
+
+  &__title {
+    color: inherit;
+    display: block;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 55px 32px;
+    align-items: center;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--white);
+    position: relative;
+    padding-bottom: 20px;
+
+  }
+
+  &__icon {
+    display: block;
+    margin-bottom: 24px;
+    color: var(--green);
+    transition: all 0.3s;
+  }
+
+  &__icon-blok {
+    height: 46px;
+    width: 42px;
+    margin-bottom: 10px;
+  }
+
+  &__item:hover .offer__icon {
+    color: var(--bluviolet);
+  }
+
+  &__item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    opacity: 0;
+    height: 1px;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+  }
+
+  &__item:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    opacity: 1;
+    background-color: var(--white);
+  }
+
 }
 
-.offer__title {
-  color: inherit;
-  display: block;
-}
 
-.offer__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 55px 32px;
-  align-items: center;
-}
-
-.offer__item {
-  font-weight: 500;
-  font-size: 18px;
-  color: var(--white);
-  position: relative;
-  padding-bottom: 20px;
-
-}
-
-.offer__icon {
-  display: block;
-  margin-bottom: 24px;
-  color: var(--green);
-  transition: all 0.3s;
-}
-
-.offer__icon-blok {
-  height: 46px;
-  width: 42px;
-  margin-bottom: 10px;
-}
-
-.offer__item:hover .offer__icon {
-  color: var(--bluviolet);
-}
-
-.offer__item::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 1px;
-  opacity: 0;
-  height: 1px;
-  background-color: var(--white);
-  transition: width 0.3s ease;
-}
-
-.offer__item:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 80px;
-  height: 1px;
-  opacity: 1;
-  background-color: var(--white);
-}

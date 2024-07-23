@@ -1,10 +1,11 @@
 .click {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-}
 
-.click:hover,
-.click:focus {
+  &:hover,
+  &:focus {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
+  }
 }
+

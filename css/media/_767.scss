@@ -31,55 +31,59 @@
     align-content: center;
     justify-content: center;
     padding: 15px 55px;
+
+    &--social {
+      height: 40px;
+      width: 40px;
+      position: relative;
+      padding: 0;
+    }
   }
 
-  .button--social {
-    height: 40px;
-    width: 40px;
-    position: relative;
-    padding: 0;
-  }
   /* конец Кнопки */
 
 
   /* Шапка */
 
-  .header__tel {
-    font-weight: 550;
-    font-size: 14px;
-  }
-
-  .header__logo {
-    width: 30px;
-  }
-
   .header {
     padding-top: 10px;
     padding-bottom: 10px;
+
+    &__tel {
+      font-weight: 550;
+      font-size: 14px;
+    }
+
+    &__logo {
+      width: 30px;
+    }
   }
 
   /* конец Шапка */
 
 
   /* Первый экран */
-  .hero__content {
+  .hero{
 
-    padding-top: 60px;
-    padding-bottom: 0px;
-    min-height: 505px;
-  }
+    &__content {
+      padding-top: 60px;
+      padding-bottom: 0px;
+      min-height: 505px;
+    }
 
-  .hero__title {
-    font-size: 40px;
-    width: 350px;
-  }
+    &__title {
+      font-size: 40px;
+      width: 350px;
+    }
 
-  .hero__text {
-    font-size: 15px;
-  }
+    &__text {
+      font-size: 15px;
+    }
 
-  .hero__button {
-    font-size: 14px;
+    &__button {
+      font-size: 14px;
+    }
+
   }
 
   /* конец Первый экран */
@@ -94,52 +98,96 @@
    /* конец Преимущества */
 
    /* Мы предлагаем */
+   .offer{
 
-  .offer__list {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
 
-  .offer__text {
-    font-size: 15px;
-  }
+    &__text {
+      font-size: 15px;
+    }
+
+   }
+
 
   /* конец Мы предлагаем */
 
 
   /* Цены */
 
-  .price__list {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 40px;
-  }
+  .price{
 
-  .price__name {
-    font-size: 15px;
-  }
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+    }
 
-  .price__text {
-    font-size: 12px;
-  }
+    &__name {
+      font-size: 15px;
+    }
 
-  .price__cost {
-    font-size: 40px;
+    &__text {
+      font-size: 12px;
+    }
+
+    &__cost {
+      font-size: 40px;
+    }
   }
 
   /* конец Цены */
 
   /* Форма */
-  .form__footer {
-    grid-template-columns: 1fr;
-  }
+  .form{
 
-  .form__labe {
-    font-size: 16px;
-  }
+    &__footer {
+      grid-template-columns: 1fr;
+    }
 
-  .form__input,
-  .form__textarea {
-    font-size: 20px;
+    &__labe {
+      font-size: 16px;
+    }
+
+    &__input,
+    &__textarea {
+      font-size: 20px;
+    }
+
+    &__accept::before {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__accept::after {
+      width: 14px;
+      top: 8px;
+      left: 7px;
+      height: 10px;
+    }
+
+    &__accept {
+      padding-left: calc(24px + 12px);
+      font-size: 12px;
+      line-height: 120%;
+    }
+
+    &__grid-item {
+      grid-column: initial;
+    }
+
+    &__labe {
+      font-size: 12px;
+      margin-bottom: -20px;
+      padding-top: 10px;
+    }
+
+    &__accept::before {
+      width: 24px;
+      height: 24px;
+    }
+
   }
 
   .check Label {
@@ -147,65 +195,34 @@
     font-size: 14px;
   }
 
-  .form__accept::before {
-    width: 25px;
-    height: 25px;
-  }
+  .modal{
+    &__body {
+      padding: 42px 20px 20px;
+      max-width: 100%;
+    }
 
-  .form__accept::after {
-    width: 14px;
-    top: 8px;
-    left: 7px;
-    height: 10px;
-  }
+    &__title {
+      font-size: 20px !important;
+    }
 
-  .form__accept {
-    padding-left: calc(24px + 12px);
-    font-size: 12px;
-    line-height: 120%;
-  }
+    & .form__grid {
+      gap: 0px;
+    }
 
-  .form__grid-item {
-    grid-column: initial;
-  }
+    &__text {
+      margin: 0;
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 120%;
+    }
 
-  .modal__body {
-    padding: 42px 20px 20px;
-    max-width: 100%;
-  }
+    &::placeholder {
+      font-size: 12px;
+    }
 
-  .modal__title {
-    font-size: 20px !important;
-  }
-
-  .modal .form__grid {
-    gap: 0px;
-  }
-
-  .form__labe {
-    font-size: 12px;
-    margin-bottom: -20px;
-    padding-top: 10px;
-  }
-
-  .modal__text {
-    margin: 0;
-    margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 120%;
-  }
-
-  .modal::placeholder {
-    font-size: 12px;
-  }
-
-  .form__accept::before {
-    width: 24px;
-    height: 24px;
-  }
-
-  .modal__body {
-    width: 0;
+    &__body {
+      width: 0;
+    }
   }
 
   /* конец Форма */

@@ -6,9 +6,11 @@
     color: var(--darkblue);
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
   }
+
+  & .header__logo,
+  & .header__tel {
+    color: var(--darkblue);
+  }
 }
 
-.header-sticky .header__logo,
-.header-sticky .header__tel {
-  color: var(--darkblue);
-}
+
