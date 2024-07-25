@@ -78,6 +78,26 @@
   color: var(--bluviolet);
 }
 
+
+@media (max-width: 1380px) {
+
+  .price{
+
+    &__name {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 15px;
+    }
+
+    &__cost {
+      font-size: 35px;
+    }
+  }
+
+}
+
 @media (max-width: 767px) {
 
   .price{
@@ -97,25 +117,6 @@
 
     &__cost {
       font-size: 40px;
-    }
-  }
-
-}
-
-@media (max-width: 1380px) {
-
-  .price{
-
-    &__name {
-      font-size: 20px;
-    }
-
-    &__text {
-      font-size: 15px;
-    }
-
-    &__cost {
-      font-size: 35px;
     }
   }
 

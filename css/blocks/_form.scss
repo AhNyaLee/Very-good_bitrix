@@ -77,6 +77,44 @@
 .check {
   font-size: 16px
 }
+
+
+@media (max-width: 1023px) {
+
+  .form{
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__grid-item {
+      grid-template-columns: 1fr;
+      gap: 0;
+      grid-column: initial;
+    }
+
+    &__grid-item--mod {
+      grid-column: initial;
+    }
+
+    &__labe {
+      padding: 0;
+    }
+
+    &__input,
+    &__textarea {
+      font-size: 20px;
+      padding: 12px 0;
+      height: 60px;
+      min-height: 60px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+  }
+
+}
+
 @media (max-width: 767px) {
 
   .form{
@@ -169,42 +207,6 @@
     &__body {
       width: 0;
     }
-  }
-
-}
-
-@media (max-width: 1023px) {
-
-  .form{
-
-    &__grid {
-      grid-template-columns: 1fr;
-    }
-
-    &__grid-item {
-      grid-template-columns: 1fr;
-      gap: 0;
-      grid-column: initial;
-    }
-
-    &__grid-item--mod {
-      grid-column: initial;
-    }
-
-    &__labe {
-      padding: 0;
-    }
-
-    &__input,
-    &__textarea {
-      font-size: 20px;
-      padding: 12px 0;
-      height: 60px;
-      min-height: 60px;
-      width: 100%;
-      max-width: 100%;
-    }
-
   }
 
 }

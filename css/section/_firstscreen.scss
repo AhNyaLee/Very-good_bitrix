@@ -93,6 +93,25 @@ video {
   content: "";
 }
 
+
+@media (max-width: 1380px) {
+
+  .hero__title {
+    font-size: 70px;
+    width: 650px;
+  }
+
+}
+
+@media (max-width: 1023px) {
+
+  .hero__title {
+    font-size: 55px;
+    width: 550px;
+  }
+
+}
+
 @media (max-width: 767px) {
 
   .hero{
@@ -116,24 +135,6 @@ video {
       font-size: 14px;
     }
 
-  }
-
-}
-
-@media (max-width: 1023px) {
-
-  .hero__title {
-    font-size: 55px;
-    width: 550px;
-  }
-
-}
-
-@media (max-width: 1380px) {
-
-  .hero__title {
-    font-size: 70px;
-    width: 650px;
   }
 
 }

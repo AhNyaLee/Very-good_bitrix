@@ -49,13 +49,6 @@
   }
 }
 
-@media (max-width: 767px) {
-
-   .benefits__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
 
 @media (max-width: 1023px) {
 
@@ -70,4 +63,11 @@
 }
 
 
+@media (max-width: 767px) {
+
+  .benefits__list {
+   grid-template-columns: repeat(2, 1fr);
+ }
+
+}
 

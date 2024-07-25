@@ -139,6 +139,11 @@ input[type=radio].visually-hidden {
   padding-bottom: 70px;
 }
 
+@media (max-width: 1023px) {
+  .section__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 @media (max-width: 767px) {
   .wrapper {
     padding: 0px 20px;
@@ -148,14 +153,6 @@ input[type=radio].visually-hidden {
   }
   ::placeholder {
     font-size: 20px;
-  }
-  .section__grid {
-    gap: 0;
-  }
-}
-@media (max-width: 1023px) {
-  .section__grid {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
 .button {
@@ -235,6 +232,18 @@ input[type=radio].visually-hidden {
   opacity: 1;
 }
 
+@media (max-width: 1380px) {
+  .button {
+    gap: 10px;
+    font-weight: 650;
+  }
+  .button--social {
+    gap: 5px;
+    font-weight: 450;
+    font-size: 12px;
+    height: 40px;
+  }
+}
 @media (max-width: 767px) {
   .button {
     display: flex;
@@ -266,18 +275,6 @@ input[type=radio].visually-hidden {
   }
   .button--social span {
     display: none;
-  }
-}
-@media (max-width: 1380px) {
-  .button {
-    gap: 10px;
-    font-weight: 650;
-  }
-  .button--social {
-    gap: 5px;
-    font-weight: 450;
-    font-size: 12px;
-    height: 40px;
   }
 }
 .title {
@@ -373,6 +370,30 @@ input[type=radio].visually-hidden {
   font-size: 16px;
 }
 
+@media (max-width: 1023px) {
+  .form__grid {
+    grid-template-columns: 1fr;
+  }
+  .form__grid-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+    grid-column: initial;
+  }
+  .form__grid-item--mod {
+    grid-column: initial;
+  }
+  .form__labe {
+    padding: 0;
+  }
+  .form__input, .form__textarea {
+    font-size: 20px;
+    padding: 12px 0;
+    height: 60px;
+    min-height: 60px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .form__footer {
     grid-template-columns: 1fr;
@@ -445,30 +466,6 @@ input[type=radio].visually-hidden {
   }
   .modal__body {
     width: 0;
-  }
-}
-@media (max-width: 1023px) {
-  .form__grid {
-    grid-template-columns: 1fr;
-  }
-  .form__grid-item {
-    grid-template-columns: 1fr;
-    gap: 0;
-    grid-column: initial;
-  }
-  .form__grid-item--mod {
-    grid-column: initial;
-  }
-  .form__labe {
-    padding: 0;
-  }
-  .form__input, .form__textarea {
-    font-size: 20px;
-    padding: 12px 0;
-    height: 60px;
-    min-height: 60px;
-    width: 100%;
-    max-width: 100%;
   }
 }
 .accordion {
@@ -700,6 +697,18 @@ video {
   content: "";
 }
 
+@media (max-width: 1380px) {
+  .hero__title {
+    font-size: 70px;
+    width: 650px;
+  }
+}
+@media (max-width: 1023px) {
+  .hero__title {
+    font-size: 55px;
+    width: 550px;
+  }
+}
 @media (max-width: 767px) {
   .hero__content {
     padding-top: 60px;
@@ -715,18 +724,6 @@ video {
   }
   .hero__button {
     font-size: 14px;
-  }
-}
-@media (max-width: 1023px) {
-  .hero__title {
-    font-size: 55px;
-    width: 550px;
-  }
-}
-@media (max-width: 1380px) {
-  .hero__title {
-    font-size: 70px;
-    width: 650px;
   }
 }
 .benefits {
@@ -775,17 +772,17 @@ video {
   background-color: var(--white);
 }
 
-@media (max-width: 767px) {
-  .benefits__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media (max-width: 1023px) {
   .benefits__list {
     grid-template-columns: repeat(3, 1fr);
   }
   .benefits__item {
     font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .benefits__list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .offer {
@@ -846,6 +843,15 @@ video {
   background-color: var(--white);
 }
 
+@media (max-width: 1380px) {
+  .offer__title {
+    margin-top: 0;
+  }
+  .offer__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+  }
+}
 @media (max-width: 767px) {
   .offer__list {
     grid-template-columns: repeat(2, 1fr);
@@ -853,15 +859,6 @@ video {
   }
   .offer__text {
     font-size: 15px;
-  }
-}
-@media (max-width: 1380px) {
-  .offer .offer__title {
-    margin-top: 0;
-  }
-  .offer .offer__list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 200px);
   }
 }
 .price__list {
@@ -933,6 +930,17 @@ video {
   color: var(--bluviolet);
 }
 
+@media (max-width: 1380px) {
+  .price__name {
+    font-size: 20px;
+  }
+  .price__text {
+    font-size: 15px;
+  }
+  .price__cost {
+    font-size: 35px;
+  }
+}
 @media (max-width: 767px) {
   .price__list {
     grid-template-columns: repeat(1, 1fr);
@@ -946,17 +954,6 @@ video {
   }
   .price__cost {
     font-size: 40px;
-  }
-}
-@media (max-width: 1380px) {
-  .price__name {
-    font-size: 20px;
-  }
-  .price__text {
-    font-size: 15px;
-  }
-  .price__cost {
-    font-size: 35px;
   }
 }
 .faq {
