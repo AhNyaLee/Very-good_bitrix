@@ -431,7 +431,7 @@ input[type=radio].visually-hidden {
   .form__grid .form__labe {
     font-size: 12px;
     margin-bottom: -20px;
-    padding-top: 0px;
+    padding: 0px;
   }
   .form__accept::before {
     width: 24px;
