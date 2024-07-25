@@ -51,5 +51,7 @@ input[type="radio"].visually-hidden {
   ::placeholder {
     font-size: 20px;
   }
-
+  .footer .section__grid {
+    gap:0;
+  }
 }

@@ -154,6 +154,9 @@ input[type=radio].visually-hidden {
   ::placeholder {
     font-size: 20px;
   }
+  .footer .section__grid {
+    gap: 0;
+  }
 }
 .button {
   padding: 21px 30px;
@@ -385,7 +388,7 @@ input[type=radio].visually-hidden {
   .form__labe {
     padding: 0;
   }
-  .form__input, .form__textarea {
+  .form__grid .form__input, .form__grid .form__textarea {
     font-size: 20px;
     padding: 12px 0;
     height: 60px;
@@ -404,7 +407,7 @@ input[type=radio].visually-hidden {
   .form__labe {
     font-size: 16px;
   }
-  .form__input, .form__textarea {
+  .form__grid .form__input, .form__grid .form__textarea {
     font-size: 20px;
   }
   .form__accept::before {
@@ -420,15 +423,15 @@ input[type=radio].visually-hidden {
   .form__accept {
     padding-left: 36px;
     font-size: 12px;
-    line-height: 120%;
+    line-height: 250%;
   }
   .form__grid-item {
     grid-column: initial;
   }
-  .form__labe {
+  .form__grid .form__labe {
     font-size: 12px;
     margin-bottom: -20px;
-    padding-top: 10px;
+    padding-top: 0px;
   }
   .form__accept::before {
     width: 24px;
@@ -436,7 +439,7 @@ input[type=radio].visually-hidden {
   }
   .form__grid {
     gap: 0;
-    margin: 15px 0;
+    margin: 10px 0;
   }
   .check Label {
     width: auto;

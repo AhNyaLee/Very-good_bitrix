@@ -101,8 +101,8 @@
       padding: 0;
     }
 
-    &__input,
-    &__textarea {
+    &__grid &__input,
+    &__grid &__textarea {
       font-size: 20px;
       padding: 12px 0;
       height: 60px;
@@ -130,8 +130,8 @@
       font-size: 16px;
     }
 
-    &__input,
-    &__textarea {
+    &__grid &__input,
+    &__grid &__textarea {
       font-size: 20px;
     }
 
@@ -150,17 +150,17 @@
     &__accept {
       padding-left: calc(24px + 12px);
       font-size: 12px;
-      line-height: 120%;
+      line-height: 250%;
     }
 
     &__grid-item {
       grid-column: initial;
     }
 
-    &__labe {
+    &__grid &__labe {
       font-size: 12px;
       margin-bottom: -20px;
-      padding-top: 10px;
+      padding-top: 0px;
     }
 
     &__accept::before {
@@ -170,7 +170,7 @@
 
     &__grid{
         gap: 0;
-        margin: 15px 0;
+        margin: 10px 0;
     }
   }
 
