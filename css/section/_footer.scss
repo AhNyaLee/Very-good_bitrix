@@ -12,6 +12,13 @@
     grid-template-columns: 1fr auto;
     align-items: center;
   }
+
+  @media (max-width: 767px) {
+    &.form__footer{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+
 }
 
 ::placeholder {
@@ -20,3 +27,5 @@
   line-height: 133%;
   color: var(--white);
 }
+
+

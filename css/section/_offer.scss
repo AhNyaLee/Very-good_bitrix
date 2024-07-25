@@ -66,4 +66,36 @@
 
 }
 
+@media (max-width: 767px) {
+
+  .offer{
+
+   &__list {
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+   }
+
+   &__text {
+     font-size: 15px;
+   }
+
+  }
+
+}
+
+@media (max-width: 1380px) {
+  .offer{
+
+  .offer__title {
+    margin-top: 0;
+  }
+
+  .offer__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+  }
+
+ }
+
+}
 

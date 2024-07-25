@@ -17,6 +17,7 @@
   flex-shrink: 0;
 }
 
+
 .modal {
   position: fixed;
   z-index: 9999;
@@ -79,6 +80,7 @@
     margin: 0;
     margin-bottom: 16px;
   }
+
 }
 
 
@@ -132,7 +134,7 @@
   background: var(--bluviolet);
 }
 
-.form__footer {
+.modal .form__footer {
   gap: 24px;
   grid-template-columns: repeat(1, 1fr);
 }

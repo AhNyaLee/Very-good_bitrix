@@ -5,9 +5,23 @@
   font-size: 32px;
   line-height: 125%;
   color: var(--darkblue);
-  & span {
+   span {
     color: var(--green);
   }
 }
 
+@media (max-width: 767px) {
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1380px) {
+
+  .title {
+    font-size: 30px;
+  }
+
+}
 

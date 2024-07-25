@@ -53,4 +53,49 @@
   }
 }
 
+@media (max-width: 767px) {
 
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &__tel {
+      font-weight: 550;
+      font-size: 14px;
+    }
+
+    &__logo {
+      width: 30px;
+    }
+  }
+
+}
+
+@media (max-width: 1023px) {
+
+  .header__logo {
+    width: 35px;
+  }
+
+}
+
+@media (max-width: 1380px) {
+
+  .header{
+
+    &__tel {
+      font-weight: 650;
+      font-size: 12px;
+    }
+
+    &__logo {
+      width: 40px;
+    }
+
+    &__contacts {
+      gap: 12px;
+    }
+
+  }
+
+}

@@ -92,3 +92,48 @@ video {
   background: linear-gradient(90deg, rgba(19, 23, 48, 0.5), rgba(19, 23, 48, 0.5));
   content: "";
 }
+
+@media (max-width: 767px) {
+
+  .hero{
+
+    &__content {
+      padding-top: 60px;
+      padding-bottom: 0px;
+      min-height: 505px;
+    }
+
+    &__title {
+      font-size: 40px;
+      width: 350px;
+    }
+
+    &__text {
+      font-size: 15px;
+    }
+
+    &__button {
+      font-size: 14px;
+    }
+
+  }
+
+}
+
+@media (max-width: 1023px) {
+
+  .hero__title {
+    font-size: 55px;
+    width: 550px;
+  }
+
+}
+
+@media (max-width: 1380px) {
+
+  .hero__title {
+    font-size: 70px;
+    width: 650px;
+  }
+
+}
