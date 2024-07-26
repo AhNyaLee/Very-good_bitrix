@@ -474,6 +474,8 @@ input[type=radio].visually-hidden {
 .accordion {
   padding: 24px 0;
   position: relative;
+  list-style: none;
+  align-items: center;
 }
 .accordion::before {
   content: "";
@@ -501,7 +503,7 @@ input[type=radio].visually-hidden {
   grid-template-columns: 1fr 26px;
   align-items: center;
 }
-.accordion__question--mod2 {
+.accordion__question--mod {
   display: flex;
   align-items: center;
   position: relative;
@@ -520,7 +522,6 @@ input[type=radio].visually-hidden {
   padding-left: 40px;
   padding-top: 20px;
 }
-
 @media (max-width: 1023px) {
   .accordion__question--mod {
     padding: 0;
@@ -532,6 +533,12 @@ input[type=radio].visually-hidden {
     font-size: 15px;
   }
 }
+@media (max-width: 374px) {
+  .accordion__answer {
+    padding: 10px;
+  }
+}
+
 /*СЕКЦИИ */
 .header {
   position: fixed;
