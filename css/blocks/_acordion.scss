@@ -14,6 +14,10 @@
     background: var(--darkblue);
     opacity: 0.2;
     transition: 0.3s;
+    list-style: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   &__question {
@@ -55,11 +59,12 @@
     padding-left: 40px;
     padding-top: 20px;
   }
-}
 
-@media (max-width: 1023px) {
+  summary{
+    display: none;
+  }
 
-  .accordion{
+  @media (max-width: 1023px) {
 
     &__question--mod {
       padding: 0;
@@ -72,6 +77,17 @@
     &__answer {
       font-size: 15px;
     }
+
+  }
+
+  @media (max-width: 374px)
+  {
+    &__answer{
+      padding: 10px;
+    }
+
   }
 
 }
+
+
