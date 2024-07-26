@@ -34,7 +34,7 @@
     align-items: center;
   }
 
-  &__question--mod {
+  &__question--mod2 {
     display: flex;
     align-items: center;
     position: relative;
@@ -58,6 +58,9 @@
     padding-top: 20px;
   }
 
+  & svg{
+    -webkit-box-align: center;
+  }
 
   @media (max-width: 1023px) {
 

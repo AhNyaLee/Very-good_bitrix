@@ -502,7 +502,7 @@ input[type=radio].visually-hidden {
   grid-template-columns: 1fr 26px;
   align-items: center;
 }
-.accordion__question--mod {
+.accordion__question--mod2 {
   display: flex;
   align-items: center;
   position: relative;
@@ -520,6 +520,9 @@ input[type=radio].visually-hidden {
   opacity: 0.8;
   padding-left: 40px;
   padding-top: 20px;
+}
+.accordion svg {
+  -webkit-box-align: center;
 }
 @media (max-width: 1023px) {
   .accordion__question--mod {
