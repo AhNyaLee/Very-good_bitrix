@@ -30,7 +30,7 @@
   &__question--mod {
     display: grid;
     gap: 12px;
-    grid-template-columns: 1fr 26px;
+    grid-template-columns: 1fr auto;
     align-items: center;
   }
 
