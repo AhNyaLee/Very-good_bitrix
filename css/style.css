@@ -474,8 +474,6 @@ input[type=radio].visually-hidden {
 .accordion {
   padding: 24px 0;
   position: relative;
-  list-style: none;
-  align-items: center;
 }
 .accordion::before {
   content: "";
@@ -496,6 +494,7 @@ input[type=radio].visually-hidden {
   line-height: 133%;
   color: var(--darkblue);
   cursor: pointer;
+  list-style: none;
 }
 .accordion__question--mod {
   display: grid;
@@ -513,7 +512,7 @@ input[type=radio].visually-hidden {
   background: var(--darkblue);
   opacity: 1;
 }
-.accordion__question::marker {
+.accordion__question::-webkit-details-marker {
   display: none;
 }
 .accordion__answer {

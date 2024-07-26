@@ -1,10 +1,7 @@
 .accordion {
   padding: 24px 0;
   position: relative;
-  list-style: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+
 
   &::before {
     content: "";
@@ -17,6 +14,7 @@
     background: var(--darkblue);
     opacity: 0.2;
     transition: 0.3s;
+
   }
 
   &__question {
@@ -26,6 +24,7 @@
     line-height: 133%;
     color: var(--darkblue);
     cursor: pointer;
+    list-style: none;
   }
 
   &__question--mod {
@@ -48,7 +47,7 @@
   }
 
 
-  &__question::marker {
+  &__question::-webkit-details-marker {
     display: none;
   }
 
